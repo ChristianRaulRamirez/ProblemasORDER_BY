@@ -1,0 +1,75 @@
+Ejercicios propuestos : 
+
+A) Trabaje con la tabla "peliculas" que guarda información de películas de video en alquiler.
+1- Elimine la tabla, si existe.
+
+2- Créela con la siguiente estructura:
+ -codigo (entero, sin signo, autoincrementable),
+ -titulo (cadena de 40),
+ -actor (cadena de 20),
+ -duracion (integer sin signo, máximo valor 200 aprox.),
+ -clave primaria (codigo).
+
+3- Visualice la estructura de la tabla "peliculas".
+
+4- Ingrese los siguientes registros:
+ insert into peliculas (titulo,actor,duracion)
+  values('Mision imposible','Tom Cruise',120);
+ insert into peliculas (titulo,actor,duracion)
+  values('Harry Potter y la piedra filosofal','Daniel R.',180);
+ insert into peliculas (titulo,actor,duracion)
+  values('Harry Potter y la camara secreta','Daniel R.',190);
+ insert into peliculas (titulo,actor,duracion)
+  values('Mision imposible 2','Tom Cruise',120);
+ insert into peliculas (titulo,actor,duracion)
+  values('Mujer bonita','Richard Gere',120);
+ insert into peliculas (titulo,actor,duracion)
+  values('Tootsie','D. Hoffman',90);
+ insert into peliculas (titulo,actor,duracion)
+  values('Un oso rojo','Julio Chavez',100);
+
+5- Ordene los registros por el campo "actor".
+
+6- Muestre las películas ordenadas por la duración, de mayor a menor.
+
+	
+
+
+
+B) En una página web se solicitan los siguientes datos para guardar información de sus visitas.
+1- Elimine la tabla "visitas", si existe.
+
+2- Créela con la siguiente estructura:
+ create table visitas (
+  numero int unsigned auto_increment,
+  nombre varchar(30) not null,
+  mail varchar(50),
+  pais varchar (20),
+  fecha date,
+  primary key(numero)
+);
+
+3- Ingrese algunos registros:
+ insert into visitas (nombre,mail,fecha)
+  values ('Ana Maria Lopez','AnaMaria@hotmail.com','2006-10-10');
+ insert into visitas (nombre,mail,fecha)
+  values ('Gustavo Gonzalez','GustavoGGonzalez@hotmail.com','2006-10-10');
+ insert into visitas (nombre,mail,fecha)
+  values ('Juancito','JuanJosePerez@hotmail.com','2006-10-11');
+ insert into visitas (nombre,mail,fecha)
+  values ('Fabiola Martinez','MartinezFabiola@hotmail.com','2006-10-12');
+ insert into visitas (nombre,mail,fecha)
+  values ('Fabiola Martinez','MartinezFabiola@hotmail.com','2006-09-12');
+ insert into visitas (nombre,mail,fecha)
+  values ('Juancito','JuanJosePerez@hotmail.com','2006-09-12');
+ insert into visitas (nombre,mail,fecha)
+  values ('Juancito','JuanJosePerez@hotmail.com','2006-09-15');
+
+4- Ordene los rergistros por fecha, en orden descendente:
+ select * from visitas
+  order by fecha desc;
+
+5- Ordene por nombre en forma ascendente y fecha en orden descendente:
+ select * from visitas
+  order by nombre asc,fecha desc;
+
